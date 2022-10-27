@@ -1,68 +1,70 @@
-// // task1
-// let A=prompt("include number:");
-// for (let n = 1; n < 1000; n++) {
-//     if(n%A==0){
-//         console.log(n)
-//     }
+// task1
+let A=prompt("include number:");
+for (let n = 1; n < 1000; n++) {
+    if(n%A==0){
+        console.log(n)
+    }
     
-// }
+}
 
 
 
 
-// // task2
-// let B=prompt("include number:");
+// task2
+let B=prompt("include number:");
 
 
-// let count = 0
-// for (let x = 0; x*x < B; x++) {
+let count = 0
+for (let x = 0; x*x < B; x++) {
 
-//     if(x>0){
-//         count ++;
-//     }
-// }
-// console.log(count);
-
-
+    if(x>0){
+        count ++;
+    }
+}
+console.log(count);
 
 
 
-// // task3
-// let C = prompt("include number:")
 
 
-// let num=0;
-// for (let y = 1; y < C; y++) {
-//     if(C%y==0){ 
-//     num=y
-//     }
-// }
-// console.log(num)
+// task3
+let C = prompt("include number:")
 
 
-// // task4
-// let K= prompt("include Number K:")
-// let F= prompt("include Number F:")
-// let sum=0;
+let num=0;
+for (let y = 1; y < C; y++) {
+    if(C%y==0){ 
+    num=y
+    }
+}
+console.log(num)
 
 
-// if (K>F){
-//     for (let i = F; i < K; i++) {
-//         if(i%7==0){
-//             sum+=i;
-//         }
-//     }
-// }else if(F>K){
-//     for (let i = K; i < F; i++) {
-//         if(i%7==0){
-//             sum+=i;
-//         }
-//     }
-// }else{
-//     console.log("there is no such number here")
-// }
+// task4
+let K= prompt("include Number K:")
+let F= prompt("include Number F:")
+let sum=0;
 
-// console.log(sum)
+
+if (K>F){
+    for (let i = F; i < K; i++) {
+        if(i%7==0){
+            sum+=i;
+        }
+    }
+}else if(F>K){
+    for (let i = K; i < F; i++) {
+        if(i%7==0){
+            sum+=i;
+        }
+    }
+}else{
+    console.log("there is no such number here")
+}
+
+console.log(sum)
+
+
 
 
 // task5
@@ -80,10 +82,41 @@ for (let p = 1; p <= num1; p++) {
 }
 console.log(n1);
 
+
+
 // task6
-// let number1=+prompt("include number 1:")
-// let number2=+prompt("include number 2:")
+let number1=+prompt("include number 1:")
+let number2=+prompt("include number 2:")
+let gcd
+if(number1>number2 && number1!=0 && number2!=0){
+
+    while ((number1 % number2) > 0){
+        gcd=number1%number2;
+        number1=number2;
+        number2=gcd;
+        
+    }
+    console.log(`GCD is: ${number2}`);
+}else if(number1<number2 && number1!=0 && number2!=0){
+    while ((number2 % number1) > 0){
+        gcd=number2%number1;
+        number2=number1;
+        number1=gcd;
+        
+    }
+    console.log(`GCD is: ${number1}`);
+}
 
 
 // task7
+let D = +prompt("Include Number:")
+let remainder, sum = 0;
+while(D > 0)
+{
+  remainder = D % 10;
+  sum = sum * 10 + remainder;
+  D = parseInt(D / 10);
+}
+console.log(sum);
+
 
