@@ -110,13 +110,38 @@ if(number1>number2 && number1!=0 && number2!=0){
 
 // task7
 let D = +prompt("Include Number:")
-let remainder, sum = 0;
+let remainder, sum1 = 0;
 while(D > 0)
 {
   remainder = D % 10;
-  sum = sum * 10 + remainder;
+  sum1 = sum1 * 10 + remainder;
   D = parseInt(D / 10);
 }
-console.log(sum);
+console.log(sum1);
 
 
+//task8
+var a = +prompt("Enter the first number: ")
+var b = +prompt("Enter the second number: ")
+let rem1;
+let rem2;
+
+while(a>0){
+    
+    rem = a % 10;
+    a = (a-rem1) / 10;
+
+    while(b>0){
+        rem2 = b % 10;
+        b = (b-rem2) / 10;
+
+        if(rem2 == rem1){
+            console.log("YES");
+            break;
+        }
+    } 
+}
+
+if(rem2 != rem1){
+    console.log("NO");
+}
